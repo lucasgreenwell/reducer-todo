@@ -3,7 +3,7 @@ import React from 'react';
 function DeleteButton(props) {
     return (
         <button>
-            DeleteButton
+            Delete completed
         </button>
     );
 }

@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from "react";
 
 function TodoForm(props) {
-    return (
-        <form>
-            <input placeholder="im a form"/>
-        </form>
-    );
+  const [name, setName] = useState("");
+  
+  const handleChange = e => {
+    setName(e.target.value)
+  };
+
+  return (
+    <form onChange={handleChange} onSubmit={e => {props.handleSubmit(e, name)}}>
+      <label for="newtodo">
+        <input type="text" id="newtodo" placeholder="im a form" />
+      </label>
+      <button>Submit</button>
+    </form>
+  );
 }
 
 export default TodoForm;
