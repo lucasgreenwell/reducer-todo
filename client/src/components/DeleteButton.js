@@ -2,7 +2,7 @@ import React from 'react';
 
 function DeleteButton(props) {
     return (
-        <button>
+        <button onClick={props.handleDelete}>
             Delete completed
         </button>
     );

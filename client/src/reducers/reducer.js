@@ -8,14 +8,13 @@ export const initialState = [
 
 export const reducer = (state, action) => {
   switch (action.type) {
-    //    case 'DELETE_COMPLETED_ITEMS':
-    //     return{}
+       case 'DELETE_COMPLETED':
+        return[...action.payload]
     case "ADD_NEW_ITEM":
       return [...state, action.payload];
-    //   case "TOGGLE_COMPLETED":{
-
-    //       return []
-    //   }
+    case "TOGGLE_COMPLETED": {
+      return [...action.payload];
+    }
     default:
       return state;
   }
